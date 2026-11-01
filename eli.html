@@ -1,0 +1,1083 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Eliganda Makeup Shope | Beauty in Every Shade</title>
+
+<style>
+:root {
+  --rose: #b85f75;
+  --deep: #6f3448;
+  --cream: #fff8f5;
+  --blush: #f5dfe2;
+  --ink: #302329;
+  --gold: #c49a6c;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--ink);
+  background: var(--cream);
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  background: #fffaf8ee;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid #f0dfe0;
+}
+
+.nav {
+  max-width: 1150px;
+  margin: auto;
+  padding: 16px 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.logo {
+  font-family: Georgia, serif;
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--deep);
+  text-decoration: none;
+}
+
+.logo span {
+  display: block;
+  font: 10px Arial, sans-serif;
+  letter-spacing: 3px;
+  color: var(--gold);
+  margin-top: 4px;
+}
+
+nav {
+  display: flex;
+  gap: 22px;
+  align-items: center;
+}
+
+nav a {
+  color: var(--ink);
+  text-decoration: none;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: var(--rose);
+}
+
+.cart-button,
+.primary {
+  border: 0;
+  background: var(--deep);
+  color: white;
+  padding: 12px 17px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.cart-button:hover,
+.primary:hover {
+  background: var(--rose);
+}
+
+.hero {
+  max-width: 1150px;
+  margin: auto;
+  padding: 55px 22px 65px;
+  display: grid;
+  grid-template-columns: 1.05fr .95fr;
+  align-items: center;
+  gap: 35px;
+}
+
+.eyebrow {
+  color: var(--rose);
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+h1 {
+  font: clamp(42px, 6vw, 72px)/1.04 Georgia, serif;
+  color: var(--deep);
+  margin: 17px 0;
+}
+
+h1 em {
+  color: var(--rose);
+  font-weight: normal;
+}
+
+.hero p {
+  line-height: 1.8;
+  max-width: 490px;
+  color: #6d5b60;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 25px;
+}
+
+.secondary {
+  padding: 11px 17px;
+  border: 1px solid #d7aab5;
+  color: var(--deep);
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.hero-art {
+  min-height: 390px;
+  border-radius: 48% 48% 18px 18px;
+  background: linear-gradient(145deg, #f7e2e3, #eabfc8 55%, #d99eaf);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-art::before {
+  content: "";
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  border: 1px solid #ffffff9c;
+  border-radius: 50%;
+  top: 48px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.product-illustration {
+  position: relative;
+  display: flex;
+  align-items: end;
+  gap: 15px;
+  transform: rotate(-7deg);
+}
+
+.bottle {
+  width: 83px;
+  height: 195px;
+  border-radius: 18px 18px 12px 12px;
+  background: linear-gradient(90deg, #8d4357, #c9788e, #8d4357);
+  box-shadow: 12px 18px 24px #8b435733;
+  position: relative;
+}
+
+.bottle::before {
+  content: "";
+  position: absolute;
+  top: -34px;
+  left: 25px;
+  width: 33px;
+  height: 38px;
+  border-radius: 5px 5px 0 0;
+  background: #bd9a75;
+}
+
+.bottle::after {
+  content: "ELIGANDA\A BEAUTY";
+  white-space: pre;
+  position: absolute;
+  top: 85px;
+  left: 7px;
+  right: 7px;
+  text-align: center;
+  color: #fff2df;
+  font: 10px/1.6 Georgia, serif;
+  letter-spacing: 1px;
+}
+
+.lipstick {
+  height: 160px;
+  width: 45px;
+  background: linear-gradient(90deg, #4b2832, #a84c66, #4b2832);
+  border-radius: 6px 6px 10px 10px;
+  position: relative;
+}
+
+.lipstick::before {
+  content: "";
+  position: absolute;
+  top: -48px;
+  left: 7px;
+  width: 31px;
+  height: 52px;
+  border-radius: 15px 15px 5px 5px;
+  background: linear-gradient(90deg, #8f354e, #c95b76, #8f354e);
+}
+
+.compact {
+  width: 120px;
+  height: 48px;
+  background: linear-gradient(#e5c6a4, #b58c66);
+  border-radius: 50%;
+  position: absolute;
+  bottom: 37px;
+  right: 35px;
+  box-shadow: 0 12px 15px #6f344833;
+}
+
+.compact::after {
+  content: "";
+  position: absolute;
+  inset: 7px;
+  border: 1px solid #fff4df;
+  border-radius: 50%;
+}
+
+.section {
+  padding: 55px 22px;
+  max-width: 1150px;
+  margin: auto;
+}
+
+.section-head {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.section-head h2 {
+  font: 38px Georgia, serif;
+  color: var(--deep);
+  margin: 10px 0;
+}
+
+.section-head p {
+  color: #806f74;
+}
+
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 9px;
+  flex-wrap: wrap;
+  margin: 22px 0;
+}
+
+.filter {
+  border: 1px solid #e6c9ce;
+  background: white;
+  color: var(--deep);
+  padding: 9px 15px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.filter.active,
+.filter:hover {
+  background: var(--deep);
+  color: white;
+}
+
+.search-row {
+  display: flex;
+  max-width: 420px;
+  margin: 0 auto 25px;
+}
+
+.search-row input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #e5c9ce;
+  border-radius: 25px;
+  outline-color: var(--rose);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  border: 1px solid #f0e1e2;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: .2s;
+  box-shadow: 0 6px 20px #6f344808;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px #6f344815;
+}
+
+.product-image {
+  height: 205px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f9eeee, #f0d5da);
+  font-size: 66px;
+}
+
+.card:nth-child(4n+2) .product-image {
+  background: linear-gradient(135deg, #f6e8d8, #e7c4aa);
+}
+
+.card:nth-child(4n+3) .product-image {
+  background: linear-gradient(135deg, #f5e3e7, #dca6b4);
+}
+
+.card:nth-child(4n+4) .product-image {
+  background: linear-gradient(135deg, #f8eee4, #e7d2bd);
+}
+
+.card-body {
+  padding: 15px;
+}
+
+.category {
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--rose);
+}
+
+.card h3 {
+  font: 20px Georgia, serif;
+  margin: 8px 0;
+}
+
+.description {
+  font-size: 12px;
+  color: #806f74;
+  min-height: 30px;
+  line-height: 1.5;
+}
+
+.price-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 14px;
+}
+
+.price {
+  font-weight: bold;
+  color: var(--deep);
+}
+
+.add {
+  border: 0;
+  background: var(--blush);
+  color: var(--deep);
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.add:hover {
+  background: var(--deep);
+  color: white;
+}
+
+.promo {
+  background: var(--deep);
+  color: #fff6f3;
+  padding: 42px 22px;
+  text-align: center;
+}
+
+.promo h2 {
+  font: 34px Georgia, serif;
+  margin: 0 0 12px;
+}
+
+.promo p {
+  color: #f0dce1;
+}
+
+.promo a {
+  display: inline-block;
+  margin-top: 10px;
+  background: #f6dce2;
+  color: var(--deep);
+  text-decoration: none;
+  padding: 12px 19px;
+  border-radius: 25px;
+  font-weight: bold;
+}
+
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 35px;
+  align-items: center;
+}
+
+.about-box {
+  background: var(--blush);
+  border-radius: 18px;
+  padding: 35px;
+  font-size: 52px;
+  text-align: center;
+}
+
+.about h2 {
+  font: 36px Georgia, serif;
+  color: var(--deep);
+}
+
+.about p {
+  line-height: 1.8;
+  color: #75646a;
+}
+
+footer {
+  background: #2d2025;
+  color: #f8e9e9;
+  padding: 28px 22px;
+  text-align: center;
+  font-size: 13px;
+}
+
+footer strong {
+  font-family: Georgia, serif;
+  font-size: 18px;
+}
+
+.cart-panel {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  background: #1e111977;
+  justify-content: flex-end;
+}
+
+.cart-panel.open {
+  display: flex;
+}
+
+.cart {
+  background: #fffaf8;
+  width: min(430px, 100%);
+  height: 100%;
+  padding: 24px;
+  overflow: auto;
+  box-shadow: -10px 0 30px #0002;
+}
+
+.cart-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cart-head h2 {
+  font: 30px Georgia, serif;
+  color: var(--deep);
+}
+
+.close {
+  border: 0;
+  background: transparent;
+  font-size: 27px;
+  cursor: pointer;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  border-bottom: 1px solid #eedfe1;
+  padding: 14px 0;
+}
+
+.cart-item small {
+  display: block;
+  color: #8a747b;
+  margin-top: 5px;
+}
+
+.qty {
+  display: flex;
+  gap: 9px;
+  align-items: center;
+}
+
+.qty button {
+  border: 1px solid #e2c4ca;
+  background: white;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.cart-total {
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  margin: 22px 0;
+}
+
+.checkout {
+  width: 100%;
+  padding: 14px;
+}
+
+.empty {
+  text-align: center;
+  color: #8a747b;
+  padding: 45px 0;
+}
+
+.notice {
+  font-size: 12px;
+  color: #856d74;
+  line-height: 1.6;
+}
+
+@media(max-width:850px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    padding-top: 35px;
+  }
+
+  .hero-art {
+    min-height: 300px;
+  }
+
+  .about {
+    grid-template-columns: 1fr;
+  }
+
+  nav {
+    gap: 12px;
+  }
+
+  nav a {
+    font-size: 12px;
+  }
+}
+
+@media(max-width:520px) {
+  .nav {
+    flex-wrap: wrap;
+  }
+
+  .logo {
+    font-size: 19px;
+  }
+
+  nav {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .cart-button {
+    padding: 10px 13px;
+  }
+
+  .grid {
+    gap: 11px;
+  }
+
+  .product-image {
+    height: 150px;
+    font-size: 48px;
+  }
+
+  .card-body {
+    padding: 11px;
+  }
+
+  .card h3 {
+    font-size: 17px;
+  }
+
+  .hero-art {
+    min-height: 260px;
+  }
+
+  .section {
+    padding: 40px 15px;
+  }
+
+  .section-head h2 {
+    font-size: 32px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="nav">
+    <a class="logo" href="#home">
+      Eliganda Makeup Shope
+      <span>BEAUTY IN EVERY SHADE</span>
+    </a>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#shop">Shop</a>
+      <a href="#about">About Us</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <button class="cart-button" id="openCart">
+      🛍️ Cart (<span id="cartCount">0</span>)
+    </button>
+  </div>
+</header>
+
+<main>
+
+<section class="hero" id="home">
+  <div>
+    <div class="eyebrow">Your beauty, your rules</div>
+
+    <h1>Glow with <em>confidence.</em></h1>
+
+    <p>
+      Discover your next beauty favorite at Eliganda Makeup Shope.
+      From everyday essentials to glam-night must-haves,
+      your perfect look starts here.
+    </p>
+
+    <div class="hero-actions">
+      <a class="primary" href="#shop" style="text-decoration:none">
+        Shop the collection ↗
+      </a>
+
+      <a class="secondary" href="#about">
+        Discover our story
+      </a>
+    </div>
+  </div>
+
+  <div class="hero-art">
+    <div class="product-illustration">
+      <div class="bottle"></div>
+      <div class="lipstick"></div>
+
+      <div class="bottle"
+           style="height:145px;width:68px;background:linear-gradient(90deg,#c6a17d,#f1d7b5,#b58a65)">
+      </div>
+    </div>
+
+    <div class="compact"></div>
+  </div>
+</section>
+
+<section class="section" id="shop">
+
+  <div class="section-head">
+    <div class="eyebrow">The beauty edit</div>
+    <h2>Shop our favorites</h2>
+    <p>Little luxuries to make you feel like your best self.</p>
+  </div>
+
+  <div class="search-row">
+    <input
+      id="search"
+      type="search"
+      placeholder="Search lipstick, blush, foundation..."
+    >
+  </div>
+
+  <div class="filters">
+    <button class="filter active" data-category="All">All Products</button>
+    <button class="filter" data-category="Lips">Lips</button>
+    <button class="filter" data-category="Face">Face</button>
+    <button class="filter" data-category="Eyes">Eyes</button>
+    <button class="filter" data-category="Tools">Tools</button>
+  </div>
+
+  <div class="grid" id="productGrid"></div>
+
+</section>
+
+<section class="promo">
+  <h2>A little treat for your beauty bag</h2>
+  <p>Find your everyday essentials and create a look that feels like you.</p>
+  <a href="#shop">Explore the collection</a>
+</section>
+
+<section class="section about" id="about">
+
+  <div class="about-box">💄 ✨ 🌷</div>
+
+  <div>
+    <div class="eyebrow">Our little beauty corner</div>
+
+    <h2>Beauty made personal.</h2>
+
+    <p>
+      At Eliganda Makeup Shope, we believe makeup is a fun way to
+      express yourself. Whether you love a fresh everyday glow or
+      a bold glam look, we're here to help you find your favorites.
+    </p>
+
+    <p>
+      <strong>Our promise:</strong>
+      a friendly shopping experience, lovely finds, and beauty for every mood.
+    </p>
+  </div>
+
+</section>
+
+<section class="section" id="contact" style="text-align:center;padding-top:10px">
+
+  <div class="section-head">
+    <div class="eyebrow">Need a hand?</div>
+
+    <h2>Let's talk beauty.</h2>
+
+    <p>
+      Questions about a product or ready to place an order?
+      Contact the shop to get started.
+    </p>
+
+    <a
+      class="primary"
+      href="https://m.me/"
+      target="_blank"
+      rel="noopener"
+      style="display:inline-block;text-decoration:none"
+    >
+      Message us on Facebook
+    </a>
+
+    <p class="notice">
+      Demo link: replace this with your shop's Facebook Page Messenger link before publishing.
+    </p>
+  </div>
+
+</section>
+
+</main>
+
+<footer>
+  <strong>Eliganda Makeup Shope</strong>
+  <p>Beauty in every shade · Made with 💗</p>
+  <span>
+    © <span id="year"></span> Eliganda Makeup Shope. Sample storefront.
+  </span>
+</footer>
+
+<div
+  class="cart-panel"
+  id="cartPanel"
+  role="dialog"
+  aria-modal="true"
+  aria-label="Shopping cart"
+>
+  <div class="cart">
+
+    <div class="cart-head">
+      <h2>Your beauty bag</h2>
+      <button class="close" id="closeCart" aria-label="Close cart">×</button>
+    </div>
+
+    <div id="cartItems"></div>
+
+    <div class="cart-total">
+      <span>Total</span>
+      <span id="cartTotal">₱0.00</span>
+    </div>
+
+    <button class="primary checkout" id="checkout">
+      Prepare order message
+    </button>
+
+    <p class="notice">
+      This demo cart works in your browser. Checkout prepares an order
+      summary; it does not charge a payment or automatically save an order.
+    </p>
+
+  </div>
+</div>
+
+<script>
+const products = [
+  {
+    id: 1,
+    name: "Velvet Matte Lipstick",
+    category: "Lips",
+    price: 249,
+    emoji: "💄",
+    desc: "A soft, bold finish for every mood."
+  },
+  {
+    id: 2,
+    name: "Rosy Cheek Blush",
+    category: "Face",
+    price: 199,
+    emoji: "🌸",
+    desc: "A fresh flush with a natural glow."
+  },
+  {
+    id: 3,
+    name: "Everyday Foundation",
+    category: "Face",
+    price: 399,
+    emoji: "🧴",
+    desc: "Your base for a smooth-looking finish."
+  },
+  {
+    id: 4,
+    name: "Lash Volume Mascara",
+    category: "Eyes",
+    price: 229,
+    emoji: "🖤",
+    desc: "Define your lashes in a few strokes."
+  },
+  {
+    id: 5,
+    name: "Glossy Lip Tint",
+    category: "Lips",
+    price: 179,
+    emoji: "💋",
+    desc: "A glossy pop of color for your lips."
+  },
+  {
+    id: 6,
+    name: "Glow Highlighter",
+    category: "Face",
+    price: 269,
+    emoji: "✨",
+    desc: "A luminous touch where the light hits."
+  },
+  {
+    id: 7,
+    name: "Soft Blend Brush",
+    category: "Tools",
+    price: 149,
+    emoji: "🖌️",
+    desc: "A makeup-bag essential for blending."
+  },
+  {
+    id: 8,
+    name: "Eyeshadow Palette",
+    category: "Eyes",
+    price: 349,
+    emoji: "🎨",
+    desc: "Easy shades for day-to-night looks."
+  }
+];
+
+let cart = {};
+let activeCategory = "All";
+
+const peso = n =>
+  "₱" + n.toLocaleString("en-PH", {
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2
+  });
+
+function renderProducts() {
+  const term = document.getElementById("search").value.toLowerCase();
+
+  const list = products.filter(p =>
+    (activeCategory === "All" || p.category === activeCategory) &&
+    (p.name + " " + p.category + " " + p.desc)
+      .toLowerCase()
+      .includes(term)
+  );
+
+  document.getElementById("productGrid").innerHTML = list.length
+    ? list.map(p => `
+      <article class="card">
+        <div class="product-image">${p.emoji}</div>
+
+        <div class="card-body">
+          <div class="category">${p.category}</div>
+
+          <h3>${p.name}</h3>
+
+          <div class="description">${p.desc}</div>
+
+          <div class="price-row">
+            <span class="price">${peso(p.price)}</span>
+
+            <button
+              class="add"
+              aria-label="Add ${p.name} to cart"
+              onclick="addToCart(${p.id})"
+            >+</button>
+          </div>
+        </div>
+      </article>
+    `).join("")
+    : `
+      <p style="grid-column:1/-1;text-align:center;padding:35px">
+        No products found. Try another search.
+      </p>
+    `;
+}
+
+function addToCart(id) {
+  cart[id] = (cart[id] || 0) + 1;
+  renderCart();
+
+  document.getElementById("cartCount").textContent =
+    Object.values(cart).reduce((a, b) => a + b, 0);
+}
+
+function changeQty(id, delta) {
+  cart[id] = (cart[id] || 0) + delta;
+
+  if (cart[id] <= 0) {
+    delete cart[id];
+  }
+
+  renderCart();
+
+  document.getElementById("cartCount").textContent =
+    Object.values(cart).reduce((a, b) => a + b, 0);
+}
+
+function renderCart() {
+  const entries = Object.entries(cart);
+
+  document.getElementById("cartItems").innerHTML = entries.length
+    ? entries.map(([id, q]) => {
+        const p = products.find(x => x.id === Number(id));
+
+        return `
+          <div class="cart-item">
+            <div>
+              <strong>${p.name}</strong>
+              <small>${peso(p.price)} each</small>
+            </div>
+
+            <div class="qty">
+              <button
+                onclick="changeQty(${p.id},-1)"
+                aria-label="Remove one"
+              >−</button>
+
+              <span>${q}</span>
+
+              <button
+                onclick="changeQty(${p.id},1)"
+                aria-label="Add one"
+              >+</button>
+            </div>
+          </div>
+        `;
+      }).join("")
+    : `
+      <div class="empty">
+        Your beauty bag is empty. 🌷
+        <br><br>
+        Add a few favorites to get started.
+      </div>
+    `;
+
+  const total = entries.reduce((sum, [id, q]) => {
+    return sum + products.find(p => p.id === Number(id)).price * q;
+  }, 0);
+
+  document.getElementById("cartTotal").textContent = peso(total);
+}
+
+document.querySelectorAll(".filter").forEach(button => {
+  button.addEventListener("click", () => {
+    document.querySelectorAll(".filter").forEach(item =>
+      item.classList.remove("active")
+    );
+
+    button.classList.add("active");
+    activeCategory = button.dataset.category;
+
+    renderProducts();
+  });
+});
+
+document.getElementById("search").addEventListener("input", renderProducts);
+
+document.getElementById("openCart").onclick = () => {
+  document.getElementById("cartPanel").classList.add("open");
+};
+
+document.getElementById("closeCart").onclick = () => {
+  document.getElementById("cartPanel").classList.remove("open");
+};
+
+document.getElementById("cartPanel").addEventListener("click", event => {
+  if (event.target.id === "cartPanel") {
+    event.currentTarget.classList.remove("open");
+  }
+});
+
+document.getElementById("checkout").onclick = () => {
+  const entries = Object.entries(cart);
+
+  if (!entries.length) {
+    alert("Your beauty bag is empty. Add a product first.");
+    return;
+  }
+
+  const lines = entries.map(([id, q]) => {
+    const p = products.find(x => x.id === Number(id));
+    return `${p.name} x ${q} — ${peso(p.price * q)}`;
+  });
+
+  const total = entries.reduce((sum, [id, q]) => {
+    return sum + products.find(p => p.id === Number(id)).price * q;
+  }, 0);
+
+  const message =
+    "Hello Eliganda Makeup Shope! I'd like to order:\n" +
+    lines.join("\n") +
+    "\nTotal: " + peso(total) +
+    "\n\nPlease confirm availability and delivery details.";
+
+  const url = "https://wa.me/?text=" + encodeURIComponent(message);
+
+  if (confirm("Open WhatsApp with your order summary?")) {
+    window.open(url, "_blank", "noopener");
+  } else {
+    prompt("Copy your order message:", message);
+  }
+};
+
+document.getElementById("year").textContent = new Date().getFullYear();
+
+renderProducts();
+renderCart();
+</script>
+
+</body>
+</html>
